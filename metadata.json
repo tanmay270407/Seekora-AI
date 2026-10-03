@@ -1,0 +1,6 @@
+{
+  "name": "DataPilot AI",
+  "description": "AI-Powered Data Intelligence Platform frontend foundation and premium white neumorphic design system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

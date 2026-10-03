@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --neu-bg: #F4F5F7;
+  --neu-surface: #F4F5F7;
+  --neu-surface-raised: #F8F9FB;
+  --neu-surface-card: #F7F8FA;
+  --neu-surface-input: #EEF0F3;
+  --neu-text: #17181C;
+  --neu-text-secondary: #646974;
+  --neu-text-muted: #9297A1;
+  --neu-accent: #6D5DFB;
+  --neu-accent-hover: #5B4AE8;
+  --neu-success: #22A879;
+  --neu-warning: #C98A25;
+  --neu-danger: #D95C5C;
+  --neu-border: rgba(20, 24, 32, 0.06);
+
+  --neu-shadow-dark: 8px 8px 18px rgba(163, 170, 181, 0.28);
+  --neu-shadow-light: -8px -8px 18px rgba(255, 255, 255, 0.95);
+  --neu-shadow-raised: 8px 8px 18px rgba(163, 170, 181, 0.28), -8px -8px 18px rgba(255, 255, 255, 0.95);
+  --neu-shadow-raised-sm: 5px 5px 12px rgba(163, 170, 181, 0.25), -5px -5px 12px rgba(255, 255, 255, 0.90);
+  --neu-shadow-inset: inset 5px 5px 12px rgba(163, 170, 181, 0.20), inset -5px -5px 12px rgba(255, 255, 255, 0.90);
+  --neu-shadow-inset-nav: inset 3px 3px 7px rgba(163, 170, 181, 0.22), inset -3px -3px 7px rgba(255, 255, 255, 0.90);
+  --neu-shadow-pressed: inset 4px 4px 10px rgba(163, 170, 181, 0.30), inset -3px -3px 8px rgba(255, 255, 255, 0.95);
+
+  --neu-radius-large: 22px;
+  --neu-radius-medium: 16px;
+  --neu-radius-small: 11px;
+}
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-neu-bg: var(--neu-bg);
+  --color-neu-surface: var(--neu-surface);
+  --color-neu-raised: var(--neu-surface-raised);
+  --color-neu-card: var(--neu-surface-card);
+  --color-neu-input: var(--neu-surface-input);
+  --color-neu-text: var(--neu-text);
+  --color-neu-secondary: var(--neu-text-secondary);
+  --color-neu-muted: var(--neu-text-muted);
+  --color-neu-accent: var(--neu-accent);
+  --color-neu-accent-hover: var(--neu-accent-hover);
+  --color-neu-success: var(--neu-success);
+  --color-neu-warning: var(--neu-warning);
+  --color-neu-danger: var(--neu-danger);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--neu-bg);
+  color: var(--neu-text);
+}
+
+/* Neumorphic Raised Utility Classes (Light Theme) */
+.neu-raised {
+  background-color: var(--neu-surface-raised);
+  box-shadow: var(--neu-shadow-raised);
+}
+
+.neu-raised-sm {
+  background-color: var(--neu-surface-raised);
+  box-shadow: var(--neu-shadow-raised-sm);
+}
+
+.neu-card {
+  background-color: var(--neu-surface-card);
+  box-shadow: var(--neu-shadow-raised);
+}
+
+.neu-surface {
+  background-color: var(--neu-surface);
+  box-shadow: var(--neu-shadow-raised);
+}
+
+/* Neumorphic Inset Utility Classes (Light Theme) */
+.neu-inset {
+  background-color: var(--neu-surface-input);
+  box-shadow: var(--neu-shadow-inset);
+}
+
+.neu-inset-nav {
+  background-color: var(--neu-surface-input);
+  box-shadow: var(--neu-shadow-inset-nav);
+}
+
+.neu-pressed {
+  box-shadow: var(--neu-shadow-pressed);
+}
+
+/* Button interactive transitions */
+.neu-btn {
+  background-color: var(--neu-surface-raised);
+  box-shadow: var(--neu-shadow-raised-sm);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-btn:hover {
+  box-shadow: 6px 6px 14px rgba(163, 170, 181, 0.32), -6px -6px 14px rgba(255, 255, 255, 0.98);
+}
+
+.neu-btn:active {
+  box-shadow: var(--neu-shadow-pressed);
+  transform: translateY(1px);
+}
+
+/* Focus styling */
+.neu-focus:focus-visible {
+  outline: 1px solid rgba(109, 93, 251, 0.6);
+  outline-offset: 1px;
+}
+
+/* Scrollbar customization for clean light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F5F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D2D6DC;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B0B6C1;
+}
